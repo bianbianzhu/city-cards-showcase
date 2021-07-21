@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travel For Life</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="images/airplane.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="card-display-section">
+        <div class="card-wrapper">
+            <div class="card card-small">
+                <div class="text-container">
+                    <h3>Toledo, Spain</h3>
+                    <h5>Also Known as The Imperial City.</h5>
+                    <a href="#" class="heart-shape">
+                    </a>
+                    <a href="#" class="heart-shape heart-shape-inner"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-small-video">
+                <div class="video-container">
+                    <video autoplay muted loop id="bg-video-1">
+                        <source src="images/bg-video-1.mp4" type="video/mp4">
+                    </video>
+                    <span></span>
+                    <button id="video-btn" onclick="playVideo()"><img src="images/pause-button.png" alt="play-button"
+                            id="button-img"></button>
+                </div>
+                <div class="text-container">
+                    <h3>Boboli Gardens</h3>
+                    <h5>Florence, Italy</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-small-rate">
+                <span>...</span>
+                <div class="text-container">
+                    <h3>Burano Island</h3>
+                    <h5>Burano, Venice, Italy</h5>
+                    <div class="rating-bar">
+                        <div class="rating-stars">
+                            <input type="radio" name="rating-star" id="star1">
+                            <label for="star1">
+                            </label>
+                            <input type="radio" name="rating-star" id="star2">
+                            <label for="star2">
+                            </label>
+                            <input type="radio" name="rating-star" id="star3">
+                            <label for="star3">
+                            </label>
+                            <input type="radio" name="rating-star" id="star4">
+                            <label for="star4">
+                            </label>
+                            <input type="radio" name="rating-star" id="star5">
+                            <label for="star5">
+                            </label>
+                        </div>
+                        <span>420 reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-upload">
+                <div class="text-container">
+                    <span class="fa fa-cloud-upload"></span>
+                    <h3>Upload a new trip</h3>
+                    <h5>Drag a file to attach or</h5>
+                    <a href="#">browse</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-medium-basic card-twin card-twin-one">
+                <div class="card-text-container">
+                    <span>Italy</span>
+                    <h3>Burano<br>Island</h3>
+                    <h5>November 2017</h5>
+                </div>
+                <a href="#">View Trip</a>
+            </div>
+            <div class="card card-medium-basic card-twin card-twin-two">
+                <a href="#">Know more</a>
+                <div class="card-text-container">
+                    <span class="fa fa-map-marker"></span>
+                    <h3>Places</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-medium-btn">
+                <div class="text-container" id="view-more-text">
+                    <span id="white-filter"></span>
+                    <h3>Venice Islands</h3>
+                    <p>Venice is a city in northeastern Italy and the capital of the Veneto region. It is built on a
+                        group of 118 small islands that are separated by canals and linked by over 400 bridges. The
+                        islands are in the shallow Venetian Lagoon, an enclosed bay lying between the mouths of the Po.
+                    </p>
+                </div>
+                <a href="#" id="view-more-btn" onclick="viewMore()">view more</a>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-large-btn">
+                <a href="#">View trip</a>
+                <div class="text-container">
+                    <h5>November 2017</h5>
+                    <h2>Florence, Italy</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper nested-grid">
+            <div class="card icon-btn">
+                <span class="fa fa-file-image-o"></span>
+                <h3>Pictures</h3>
+            </div>
+            <div class="card icon-btn place-btn">
+                <span class="fa fa-map-marker"></span>
+                <h3>Places</h3>
+            </div>
+            <div class="card card-small card-small-basic">
+                <span>...</span>
+                <div class="text-container">
+                    <h3>The Colorsseum</h3>
+                    <h5>Rome, Italy</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper nested-grid nested-grid-two">
+            <div class="card icon-btn">
+                <div class="text-container">
+                    <h5>november
+                        <span>2017</span>
+                    </h5>
+                    <h3>Euro trip</h3>
+                </div>
+            </div>
+            <div class="card card-small card-small-basic card-small-basic-variant">
+                <span>...</span>
+                <div class="text-container">
+                    <h3>Vatican City</h3>
+                    <h5>Vatican</h5>
+                </div>
+                <a href="#">View Trip</a>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-medium-btn card-medium-btn-wvideo">
+                <video loop muted id="bg-video-3" onclick="showTextContainer()">
+                    <source src="../project-cards/images/bg-video-3.mp4">
+                </video>
+                <span class="fa fa-play-circle" id="card-10-play-btn" onclick="viewTripDetail()"></span>
+                <input type="radio" id="card-10-heart" name="card-10-heart">
+                <label for="card-10-heart"></label>
+                <span class="fa fa-cloud-upload"></span>
+                <div class="text-container" id="card-10-text-container">
+                    <h3>Monuments in Florence</h3>
+                    <h5>A quick journey into Florence's most important monuments.</h5>
+                    <a href="#" id="view-trip-detail-btn" onclick="viewTripDetail()">View trip detail</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-medium-basic">
+                <div class="text-container">
+                    <h3>Burano Doors</h3>
+                    <h5>Burano, Venice, Italy</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-medium-basic card-medium-basic-wbtn">
+                <div class="text-container">
+                    <div class="rating-bar">
+                        <div class="rating-stars">
+                            <input type="radio" name="rating-star-2" id="star2-1">
+                            <label for="star2-1">
+                            </label>
+                            <input type="radio" name="rating-star-2" id="star2-2">
+                            <label for="star2-2">
+                            </label>
+                            <input type="radio" name="rating-star-2" id="star2-3">
+                            <label for="star2-3">
+                            </label>
+                            <input type="radio" name="rating-star-2" id="star2-4">
+                            <label for="star2-4">
+                            </label>
+                            <input type="radio" name="rating-star-2" id="star2-5">
+                            <label for="star2-5">
+                            </label>
+                        </div>
+                        <span>420 reviews</span>
+                    </div>
+                    <h3>The Blue House</h3>
+                    <h5>Burano, Venice, Italy</h5>
+                    <h3 class="price">$<span>250</span> per night</h3>
+                    <a href="#"><span class="fa fa-plane"></span><span class="fa fa-arrow-right"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card card-large-wvideo">
+                <video loop muted id="bg-video-2">
+                    <source src="../project-cards/images/bg-video-2.mp4" type="video/mp4">
+                </video>
+                <span id="black-filter"></span>
+                <i class="fa fa-times" onclick="closeViewTrip()"></i>
+                <div class="text-container" id="card-nine-text-container">
+                    <h5>November 2017</h5>
+                    <h3>Venice Islands</h3>
+                    <p>Venice is a city in northeastern Italy and the capital of the Veneto region. It is built on a
+                        group of 118 small islands that are separated by canals and linked by over 400 bridges. The
+                        islands are in the shallow Venetian Lagoon, an enclosed bay lying between the mouths of the Po
+                        and the Piave rivers.
+                    </p>
+                    <a href="#" onclick="viewTrip()">View Trip</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="" async defer></script>
+    <script>
+        var bgVideoOne = document.getElementById("bg-video-1");
+        var videoBtn = document.getElementById("video-btn");
+        var buttonImage = document.getElementById("button-img")
+        var viewMoreBtn = document.getElementById("view-more-btn");
+        var viewMoreText = document.getElementById("view-more-text");
+        var whiteFilter = document.getElementById("white-filter");
+        var textContainer = document.getElementById("card-nine-text-container");
+        var bgVideoTwo = document.getElementById("bg-video-2");
+        function playVideo() {
+            if (bgVideoOne.paused) {
+                bgVideoOne.play();
+                buttonImage.src = "images/pause-button.png";
+            } else {
+                bgVideoOne.pause();
+                buttonImage.src = "images/play-button.png";
+            }
+        }
+        function viewMore() {
+            if (viewMoreBtn.textContent == "view more") {
+                viewMoreText.style.transform = "translateY(0)";
+                viewMoreBtn.innerText = "view less";
+                whiteFilter.style.background = "linear-gradient(to top, transparent 50%, transparent)";
+            } else {
+                viewMoreText.style.transform = "translateY(30%)";
+                viewMoreBtn.innerText = "view more";
+                whiteFilter.style.background = "linear-gradient(to top, rgba(255, 255, 255, 1) 50%, transparent)";
+            }
+
+        }
+        function viewTrip() {
+            textContainer.style.transform = "translateX(100%)";
+            bgVideoTwo.play();
+            document.getElementById("black-filter").style.background = "transparent";
+        }
+        function closeViewTrip() {
+            textContainer.style.transform = "translateX(0)";
+            bgVideoTwo.pause();
+            document.getElementById("black-filter").style.background = "linear-gradient(transparent, #0009)";
+        }
+        function viewTripDetail() {
+            if (document.getElementById("view-trip-detail-btn").textContent == "View trip detail") {
+                document.getElementById("bg-video-3").play();
+                document.getElementById("view-trip-detail-btn").innerText = "Close trip detail"
+                document.getElementById("card-10-text-container").style.transform = "translateY(100%)";
+                document.getElementById("card-10-play-btn").style.display = "none";
+            } else {
+                document.getElementById("bg-video-3").pause();
+                document.getElementById("view-trip-detail-btn").innerText = "View trip detail"
+            }
+        }
+        function showTextContainer() {
+            if (document.getElementById("view-trip-detail-btn").textContent == "Close trip detail") {
+                document.getElementById("card-10-text-container").style.transform = "translateY(0)";
+                document.getElementById("bg-video-3").pause();
+                document.getElementById("view-trip-detail-btn").innerText = "View trip detail"
+                document.getElementById("card-10-play-btn").style.display = "inline-block";
+            } else {
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

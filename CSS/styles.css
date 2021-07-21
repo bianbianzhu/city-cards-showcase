@@ -1,0 +1,1770 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================responsive-solution===================== */
+
+@media only screen and (min-width: 1000px) {
+  html {
+    font-size: 24.41%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  html {
+    font-size: 26.86%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 29.3%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  html {
+    font-size: 31.74%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  html {
+    font-size: 34.18%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 36.62%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 39.06%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  html {
+    font-size: 41.5%;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 43.95%;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  html {
+    font-size: 48.83%;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* ========================================================= */
+body {
+  min-height: 100vh;
+  background: #F0F1F5;
+  position: relative;
+  z-index: -999;
+}
+
+/* ====================page-layout-main======================== */
+
+.card-display-section {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+  /* justify-items: center;
+    align-items: center; */
+  grid-auto-rows: 1fr 1.5fr 1.5fr;
+  padding: 3.13% 14.77%;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+}
+
+/* =====================main-page-background============ */
+.card-display-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#bc75f9, #08f7fe);
+  clip-path: circle(25% at 10% 40%);
+}
+
+.card-display-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #f5d300, #fe53bb);
+  clip-path: circle(20% at 90% 70%);
+  z-index: -1;
+}
+
+.card-wrapper {
+  /* background: rgba(255, 0, 0, 0.589); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-display-section .card-wrapper:nth-child(7) {
+  grid-column: 2/4;
+}
+
+.card-display-section .card-wrapper:last-child {
+  grid-column: 4/6;
+}
+
+.card-display-section .card-wrapper:nth-child(5) {
+  gap: 4rem;
+}
+
+/* =====================nested-grid-one=================== */
+.nested-grid {
+  /* background: silver; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 4rem;
+}
+
+.nested-grid .card:nth-child(3) {
+  grid-column: 1/3;
+}
+
+/*================= nest-grid-two=========================*/
+.nested-grid-two {
+  grid-template-columns: 1fr;
+}
+
+.card-display-section .card-wrapper .card {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  border-left: 0.05rem rgba(0, 0, 0, 0.3) solid;
+  border-top: 0.05rem rgba(0, 0, 0, 0.3) solid;
+  background: lightgray;
+}
+
+/* ================1__ small-card==================== */
+.card-display-section .card-wrapper .card-small {
+  background: url(../images/bg-7.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: 1s;
+}
+
+.card-display-section .card-wrapper .card-small::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.2rem;
+  background: linear-gradient(#0001, #0009);
+  /* backdrop-filter: grayscale(100); */
+}
+
+.card-display-section .card-wrapper .card-small::before {
+  content: "Spain";
+  position: absolute;
+  text-transform: uppercase;
+  top: 2.5rem;
+  right: 1.5rem;
+  width: 6.5rem;
+  height: 2rem;
+  background: rgb(83, 175, 250);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+
+.card-display-section .card-wrapper .card-small:hover {
+  background-size: 110% 110%;
+}
+
+.card-display-section .card-wrapper .card-small .text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8rem;
+  width: 100%;
+  background: #fff;
+  border-bottom-right-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  z-index: 1;
+}
+
+.card-display-section .card-wrapper .card-small .text-container {
+  padding: 1.5rem 2rem;
+}
+
+.card-display-section .card-wrapper .card-small .text-container h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.card-display-section .card-wrapper .card-small .text-container h5 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.card-display-section .card-wrapper .card-small .text-container .heart-shape {
+  position: absolute;
+  display: inline-block;
+  width: 10rem;
+  height: 9rem;
+  right: 1rem;
+  top: 0;
+  transform: scale(0.4);
+  -webkit-transform-origin-x: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape::before,
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape::after {
+  background: silver;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 5.2rem;
+  height: 8rem;
+  border-radius: 5rem 5rem 0 0;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape::before {
+  transform: rotate(-45deg);
+  left: 5rem;
+  transform-origin: 0 100%;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape::after {
+  transform: rotate(45deg);
+  left: 0;
+  transform-origin: 100% 100%;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape-inner {
+  display: inline-block;
+  transform: scale(0.33);
+  -webkit-transform-origin-x: 95%;
+  right: 1rem;
+  top: -0.1rem;
+  z-index: 2;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape-inner::before,
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape-inner::after {
+  background: white;
+  transition: 0.5s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape-inner:hover:before,
+.card-display-section
+  .card-wrapper
+  .card-small
+  .text-container
+  .heart-shape-inner:hover:after {
+  background: silver;
+}
+
+/* ===============2__ small-card-with-video================== */
+.card-display-section .card-wrapper .card-small-video::before {
+  content: "Italy";
+  text-transform: uppercase;
+  color: #fff;
+  background: tomato;
+  width: 6.5rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  top: 2.5rem;
+  right: 1.5rem;
+}
+
+.card-display-section .card-wrapper .card-small-video::after {
+  content: "...";
+  position: absolute;
+  color: white;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  z-index: 2;
+}
+
+.card-display-section .card-wrapper .card-small-video .video-container {
+  width: 100%;
+  height: 100%;
+}
+
+.card-display-section .card-wrapper .card-small-video .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+.card-display-section .card-wrapper .card-small-video .video-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.2rem;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 2s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small-video:hover
+  .video-container
+  span {
+  background: transparent;
+}
+
+.card-display-section .card-wrapper .card-small-video .video-container button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 50%;
+  border: none;
+  color: transparent;
+  background: none;
+  transition: 1s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small-video
+  .video-container
+  button
+  img {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.card-display-section .card-wrapper .card-small-video .text-container {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.card-display-section .card-wrapper .card-small-video .text-container h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.card-display-section .card-wrapper .card-small-video .text-container h5 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* =================3__ small-card-with-rating-bar=========== */
+.card-display-section .card-wrapper .card-small-rate {
+  background: url(../images/bg-8.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+  transition: 1.5s;
+}
+
+.card-display-section .card-wrapper .card-small-rate:hover {
+  background-size: 110% 110%;
+}
+
+.card-display-section .card-wrapper .card-small-rate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(transparent, #0008 90%, #0008);
+  border-radius: 1.2rem;
+}
+
+.card-display-section .card-wrapper .card-small-rate::before {
+  content: "Italy";
+  text-transform: uppercase;
+  color: #fff;
+  background: tomato;
+  width: 6.5rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  top: 2.5rem;
+  right: 1.5rem;
+}
+
+.card-display-section .card-wrapper .card-small-rate > span {
+  position: absolute;
+  color: white;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  z-index: 1;
+}
+
+.card-display-section .card-wrapper .card-small-rate .text-container {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.card-display-section .card-wrapper .card-small-rate .text-container h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.card-display-section .card-wrapper .card-small-rate .text-container h5 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ==============3__ interactive-rating-bar================== */
+.card-display-section .card-wrapper .card-small-rate .rating-bar {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.card-display-section .card-wrapper .card-small-rate .rating-bar input {
+  /* visibility: hidden;  */
+  /* this is the negative margin problem, it still has the space when its hidden */
+  display: none;
+}
+
+.card-display-section .card-wrapper .card-small-rate .rating-bar .rating-stars {
+  display: flex;
+  transform: rotateY(180deg);
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small-rate
+  .rating-bar
+  .rating-stars
+  label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  width: 1.3rem;
+  /* background: #ccc; */
+  margin: 0 0.2rem;
+  /* when there is no ::before, why do i need a negative margin??? does fontawesome has margin???  -- because we didnot set up a width for label? because the input is still there*/
+  /* when there is ::before, why don't we need the negative margin? - because the label doesn't have a width, and in fact, the fa-star-o is not showing*/
+  /* too much headache, better to use pesudo element or span  */
+  position: relative;
+  cursor: pointer;
+}
+
+.card-display-section .card-wrapper .card-small-rate .rating-bar label::after {
+  position: absolute;
+  content: "\f006";
+  font-family: fontAwesome;
+  color: yellow;
+  /* must have this font-family */
+  /* font-size: 1.6rem; */
+}
+
+.card-display-section .card-wrapper .card-small-rate .rating-bar label::before {
+  position: absolute;
+  content: "\f005";
+  color: yellow;
+  font-family: fontAwesome;
+  /* font-size: 1.6rem; */
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small-rate
+  .rating-bar
+  label:hover::before {
+  opacity: 1;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-small-rate
+  .rating-bar
+  label:hover
+  ~ label::before {
+  opacity: 1;
+}
+
+/* the general sibling combinator for element at the same lvl
+
+#yourId:hover ~ div
+{
+    color:red;
+} */
+.card-display-section
+  .card-wrapper
+  .card-small-rate
+  .rating-bar
+  input:checked
+  ~ label::before {
+  opacity: 1;
+  /* why it covers all the label before???? */
+  /* 举例子：点了第一个label，因为for 和id 一样， 所以第一个input checked，那么往后的所有 平级的 label 都会点亮 - 所以label 得在input后面 */
+}
+
+.card-display-section .card-wrapper .card-small-rate .rating-bar span {
+  margin-left: 0.5rem;
+}
+
+/* =======4__ card-small-upload============ */
+.card-display-section .card-wrapper .card-upload {
+  background: #fff;
+}
+
+.card-display-section .card-wrapper .card-upload::before {
+  content: "";
+  position: absolute;
+  border: 0.3rem dashed silver;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 1.2rem;
+}
+
+.card-display-section .card-wrapper .card-upload .text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-display-section .card-wrapper .card-upload .text-container span {
+  font-size: 5rem;
+  color: #666;
+}
+
+.card-display-section .card-wrapper .card-upload .text-container h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.card-display-section .card-wrapper .card-upload .text-container h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 2;
+}
+
+.card-display-section .card-wrapper .card-upload .text-container a:link,
+.card-display-section .card-wrapper .card-upload .text-container a:visited {
+  text-decoration: none;
+  color: rgb(33, 121, 221);
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+/* =========5__twin-medium-card-basic================= */
+
+.card-display-section .card-wrapper .card-medium-basic.card-twin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-display-section .card-wrapper .card-medium-basic.card-twin::before {
+  display: none;
+}
+
+.card-display-section .card-wrapper .card-medium-basic.card-twin::after {
+  display: none;
+}
+/* =========5__twin-medium-card-basic-one================= */
+.card-display-section .card-wrapper .card-medium-basic.card-twin-one {
+  background: url(../images/bg-6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-one
+  .card-text-container {
+  color: #fff;
+  text-align: center;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-one
+  .card-text-container
+  span {
+  text-transform: uppercase;
+  background: tomato;
+  width: 6.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-one
+  .card-text-container
+  h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-one
+  .card-text-container
+  h5 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.card-display-section .card-wrapper .card-medium-basic.card-twin-one a:link,
+.card-display-section .card-wrapper .card-medium-basic.card-twin-one a:visited {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-radius: 0 0 1.2rem 1.2rem;
+  color: #fff;
+  width: 100%;
+  height: 3.5rem;
+  background: linear-gradient(to right, rgb(59, 69, 209), rgb(76, 157, 250));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* =========5__twin-medium-card-basic-two================= */
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-two
+  .card-text-container {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  transition: 1s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-two
+  .card-text-container
+  span {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-two
+  .card-text-container
+  h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-two
+  .card-text-container::before {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.3rem;
+  width: 2rem;
+  background: #fff;
+}
+
+.card-display-section .card-wrapper .card-medium-basic.card-twin-two a:link,
+.card-display-section .card-wrapper .card-medium-basic.card-twin-two a:visited {
+  position: absolute;
+  bottom: 1rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  background: linear-gradient(to right, rgb(59, 69, 209), rgb(76, 157, 250));
+  font-size: 1.3rem;
+  font-weight: 300;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic.card-twin-two
+  a:hover
+  ~ .card-text-container {
+  transform: translateY(-0.5rem);
+}
+
+/* ==============6__ card-medium-with-btn==================== */
+.card-display-section .card-wrapper .card-medium-btn {
+  background: url(../images/bg-3.png);
+  background-position: top;
+  background-size: 100% 60%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.card-display-section .card-wrapper .card-medium-btn:hover {
+  /* background-position-y: .1rem;
+  why this is not working- it will be the same as :bottom*/
+  /* background-position-y: bottom; */
+  background-size: 110% 65%;
+  /* still a tricky way */
+}
+
+.card-display-section .card-wrapper .card-medium-btn::before {
+  content: "Italy";
+  text-transform: uppercase;
+  color: #fff;
+  background: tomato;
+  width: 6.5rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  top: 2.5rem;
+  right: 1.5rem;
+}
+
+.card-display-section .card-wrapper .card-medium-btn .text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80%;
+  background: #fff;
+  border-radius: 0 0 1.2rem 1.2rem;
+  padding: 2rem 2.5rem;
+  transform: translateY(30%);
+  transition: 0.5s ease-in-out;
+}
+
+.card-display-section .card-wrapper .card-medium-btn .text-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 1.2rem 1.2rem;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, transparent);
+  transition: 2s;
+  /* this is not working */
+}
+
+.card-display-section .card-wrapper .card-medium-btn .text-container h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  /* letter-spacing: .05rem; */
+  margin-bottom: 1rem;
+}
+
+.card-display-section .card-wrapper .card-medium-btn .text-container p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: justify;
+  color: #999;
+}
+
+.card-display-section .card-wrapper .card-medium-btn a:link,
+.card-display-section .card-wrapper .card-medium-btn a:visited {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(to right, rgb(59, 69, 209), rgb(76, 157, 250));
+  color: white;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.card-display-section .card-wrapper .card-medium-btn a:hover {
+  letter-spacing: 0.2rem;
+}
+
+/* =================7__ large-card-with-button================ */
+.card-display-section .card-wrapper .card-large-btn {
+  background: url(../images/bg-2.png);
+  background-position: center;
+  /* background-size: 100% 100%;  why cant this cover the whole background??? it still has a white border*/
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+  transition: 1s;
+}
+
+.card-display-section .card-wrapper .card-large-btn:hover {
+  background-size: 120% 120%;
+}
+
+.card-display-section .card-wrapper .card-large-btn::before {
+  content: "Italy";
+  text-transform: uppercase;
+  background: #fff;
+  width: 6.5rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  top: 4rem;
+  right: 3rem;
+}
+
+.card-display-section .card-wrapper .card-large-btn::after {
+  content: "";
+  position: absolute;
+  left: -0.3rem;
+  bottom: 6rem;
+  height: 6.5rem;
+  width: 0.7rem;
+  background: rgb(160, 238, 144);
+  transition: 1s ease-out;
+}
+
+.card-display-section .card-wrapper .card-large-btn .text-container {
+  position: absolute;
+  bottom: 5rem;
+  left: 3rem;
+  transition: 2.5s ease-out;
+}
+
+.card-display-section .card-wrapper .card-large-btn .text-container h5 {
+  font-size: 1.6rem;
+  color: lightgreen;
+  font-weight: 500;
+}
+
+.card-display-section .card-wrapper .card-large-btn .text-container h2 {
+  font-size: 4.2rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card-display-section .card-wrapper .card-large-btn a:link,
+.card-display-section .card-wrapper .card-large-btn a:visited {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(to right, rgb(59, 69, 209), rgb(76, 157, 250));
+  color: white;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  transition: 0.5s;
+  z-index: 20;
+}
+
+.card-display-section .card-wrapper .card-large-btn a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgb(59, 69, 209), rgb(76, 157, 250));
+  border-radius: 3rem;
+  z-index: -1;
+  transition: 1s;
+}
+
+.card-display-section .card-wrapper .card-large-btn a:hover {
+  transform: translateY(-0.5rem);
+}
+
+.card-display-section .card-wrapper .card-large-btn a:hover::before {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.card-display-section .card-wrapper .card-large-btn a:hover ~ .text-container {
+  transform: translateX(8rem);
+}
+
+/* ==================8__ nested-grid-icon-btn============== */
+.card-display-section .nested-grid .icon-btn {
+  background: linear-gradient(45deg, rgb(59, 69, 209), rgb(76, 157, 250));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.card-display-section .nested-grid .icon-btn:hover {
+  transform: translateY(-0.5rem);
+}
+
+.card-display-section .nested-grid .icon-btn span {
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.card-display-section .nested-grid .icon-btn h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-display-section .nested-grid .place-btn {
+  background: linear-gradient(
+    45deg,
+    rgba(196, 0, 255, 1),
+    rgba(140, 3, 244, 1)
+  );
+}
+
+/* ==============8__ nested-grid-small-card-basic============ */
+.card-display-section .nested-grid .card-small-basic {
+  background: url(../images/bg-4.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.card-display-section .nested-grid .card-small-basic::before {
+  content: "ITALY";
+  background: tomato;
+  right: unset;
+  left: 2rem;
+}
+
+.card-display-section .nested-grid .card-small-basic::after {
+  background: transparent;
+}
+
+.card-display-section .nested-grid .card-small-basic > span {
+  position: absolute;
+  color: #fff;
+  font-size: 3rem;
+  right: 1.2rem;
+  top: 1.8rem;
+  transform: rotate(90deg);
+}
+
+.card-display-section .nested-grid .card-small-basic .text-container {
+  background: transparent;
+  color: #fff;
+  padding: 0rem 2.5rem;
+}
+
+.card-display-section .nested-grid .card-small-basic .text-container h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+/* ================9__ nested-grid-two icon-btn=============== */
+.card-display-section .nested-grid-two .icon-btn {
+  background: linear-gradient(
+    45deg,
+    rgba(244, 119, 41, 1) 0%,
+    rgba(255, 158, 0, 1) 100%
+  );
+  color: #fff;
+  overflow: hidden;
+}
+
+.card-display-section .nested-grid-two .icon-btn::before {
+  content: "201";
+  font-size: 18rem;
+  line-height: 11rem;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.09);
+  font-weight: 500;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: 2s;
+}
+
+.card-display-section .nested-grid-two .icon-btn:hover::before {
+  transform: translateX(-50%) translateX(-5rem);
+  /* so it wont replace??? but combine???? */
+}
+
+.card-display-section .nested-grid-two .icon-btn::after {
+  content: "7";
+  font-size: 18rem;
+  line-height: 12rem;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.09);
+  font-weight: 500;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: 2s;
+}
+
+.card-display-section .nested-grid-two .icon-btn:hover::after {
+  transform: translateX(-50%) translateX(14rem);
+}
+
+.card-display-section .nested-grid-two .icon-btn .text-container {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.card-display-section .nested-grid-two .icon-btn .text-container::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.3rem;
+  width: 5rem;
+  background: #fff;
+  transition: 2s;
+}
+
+.card-display-section .nested-grid-two .icon-btn:hover .text-container::before {
+  width: 10rem;
+}
+
+.card-display-section .nested-grid-two .icon-btn .text-container h5 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.card-display-section .nested-grid-two .icon-btn .text-container h5 span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  display: block;
+}
+
+.card-display-section .nested-grid-two .icon-btn .text-container h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: -1.1rem;
+  transition: 0.25s;
+}
+
+.card-display-section .nested-grid-two .icon-btn:hover .text-container h3 {
+  margin-top: 0;
+}
+
+/* =====9__ nested-grid-two small-card-basic-variant========= */
+.card-display-section .nested-grid-two .card-small-basic-variant {
+  background: url(../images/bg-5.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.card-display-section .nested-grid-two .card-small-basic-variant::before {
+  background: rgb(83, 175, 250);
+  content: "Vatican";
+}
+
+.card-display-section
+  .nested-grid-two
+  .card-small-basic-variant
+  .text-container {
+  /* background: white; */
+  bottom: 4rem;
+}
+
+.card-display-section .nested-grid-two .card-small-basic-variant a:link,
+.card-display-section .nested-grid-two .card-small-basic-variant a:visited {
+  text-decoration: none;
+  position: absolute;
+  bottom: 2rem;
+  left: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.2rem;
+}
+
+.card-display-section .nested-grid-two .card-small-basic-variant a::before {
+  content: "\f061";
+  font-family: FontAwesome;
+  position: absolute;
+  font-weight: 100;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2rem;
+  transition: 1s;
+}
+
+.card-display-section .nested-grid-two .card-small-basic-variant a:hover {
+  background: gray;
+}
+
+.card-display-section
+  .nested-grid-two
+  .card-small-basic-variant
+  a:hover::before {
+  transform: translateY(-50%) translateX(2rem);
+}
+
+/* ==========10__medium-card-wbtn-wvideo================= */
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo {
+  overflow: hidden;
+  background: none;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo::before {
+  display: none;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1.2rem;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo span {
+  position: absolute;
+  color: #fff;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo span:nth-child(2) {
+  font-size: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo input {
+  display: none;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo label {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  top: 1.6rem;
+  right: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo label::before {
+  content: "\f08a";
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 2.1rem;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo label::after {
+  content: "\f004";
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 2.1rem;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo label:hover::after {
+  opacity: 1;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-btn-wvideo
+  input:checked
+  ~ label::after {
+  opacity: 1;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo span:nth-child(5) {
+  font-size: 2.4rem;
+  top: 1.5rem;
+  right: 6rem;
+  cursor: pointer;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo .text-container {
+  height: 50%;
+  transform: translateY(0);
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo .text-container h3 {
+  font-size: 2.2rem;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo .text-container h5 {
+  color: #888;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.card-display-section .card-wrapper .card-medium-btn-wvideo .text-container a {
+  width: 90%;
+  border-radius: 0.8rem;
+  text-align: center;
+  bottom: 0.5rem;
+}
+
+/* =================11__medium-card-basic==================== */
+.card-display-section .card-wrapper .card-medium-basic {
+  background: url(../images/bg-1.png);
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+  background-position: center;
+  transition: 1.5s;
+}
+
+.card-display-section .card-wrapper .card-medium-basic:hover {
+  background-size: 120% 120%;
+}
+
+.card-display-section .card-wrapper .card-medium-basic::before {
+  content: "\f004";
+  position: absolute;
+  font-family: FontAwesome;
+  color: #fff;
+  right: 3rem;
+  top: 3rem;
+  font-size: 3rem;
+  z-index: 1;
+}
+
+.card-display-section .card-wrapper .card-medium-basic::after {
+  content: "16";
+  position: absolute;
+  background: tomato;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 6.8rem;
+  right: 8.5rem;
+}
+
+/* This cannot be done-- pesudo element just can't */
+/* .card-display-section .card-wrapper .card-medium-basic::before:hover {
+  color: yellow;
+} */
+
+.card-display-section .card-wrapper .card-medium-basic .text-container {
+  color: #fff;
+  position: absolute;
+  bottom: 3.5rem;
+  left: 3rem;
+}
+
+.card-display-section .card-wrapper .card-medium-basic .text-container h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.card-display-section .card-wrapper .card-medium-basic .text-container h5 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+/* ========12__medium-card-basic-with stacked btn============ */
+.card-display-section .card-wrapper .card-medium-basic-wbtn {
+  background: url(../images/bg-6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+
+.card-display-section .card-wrapper .card-medium-basic-wbtn:hover {
+  background-size: 110% 110%;
+}
+
+.card-display-section .card-wrapper .card-medium-basic-wbtn::after {
+  display: none;
+}
+
+.card-display-section .card-wrapper .card-medium-basic-wbtn .text-container {
+  position: absolute;
+  background: #fff;
+  width: 85%;
+  color: #000;
+  left: 7.5%;
+  bottom: -3rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  border: 0.1rem rgba(85, 85, 85, 0.377) solid;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transform: rotateY(180deg);
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  input {
+  display: none;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  label {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  label::before {
+  content: "\f006";
+  font-family: FontAwesome;
+  color: rgb(255, 217, 0);
+  font-size: 1.5rem;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  label::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "\f005";
+  font-family: FontAwesome;
+  opacity: 1;
+  color: rgb(255, 217, 0);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  label:hover::after,
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  label:hover
+  ~ label::after {
+  opacity: 1;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  .rating-stars
+  input:checked
+  ~ label::after {
+  opacity: 1;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  .rating-bar
+  span {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  color: silver;
+  transform: scale(0.8);
+  -webkit-transform-origin-x: 0;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  h3:nth-child(4) {
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin-top: 1.5rem;
+}
+
+.card-display-section .card-wrapper .card-medium-basic-wbtn .text-container h5 {
+  color: silver;
+  line-height: 1.4;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a:link,
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a:visited {
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 100;
+  right: 2rem;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background: linear-gradient(to right, rgb(59, 69, 209), rgb(76, 157, 250));
+  transition: 1s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a
+  span {
+  transition: 1s;
+  opacity: 1;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a
+  span:nth-child(1) {
+  transform: translateX(-1rem);
+  position: absolute;
+  opacity: 0;
+  font-size: 1.5rem;
+  transition-delay: 0.5s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a:hover
+  span {
+  transform: translateX(1rem);
+  opacity: 0;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a:hover
+  span:nth-child(1) {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-medium-basic-wbtn
+  .text-container
+  a:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* ===============13__ large-card-with-video-bg====== */
+
+.card-display-section .card-wrapper .card-large-wvideo {
+  overflow: hidden;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #0009);
+  border-radius: 1.2rem;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo i {
+  position: absolute;
+  color: #fff;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  background: #fff;
+  z-index: 1;
+  border-radius: 0 1.2rem 1.2rem 0;
+  padding: 8rem 3rem 3rem 3rem;
+  transition: 1.5s ease-in-out;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container::before {
+  content: "Italy";
+  text-transform: uppercase;
+  color: #fff;
+  background: rgb(255, 0, 64);
+  width: 6.5rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  top: 2.5rem;
+  right: 2.5rem;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container h5 {
+  font-size: 1.6rem;
+  color: rgb(129, 219, 129);
+  font-weight: 500;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: lef;
+  color: #888;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container a:link,
+.card-display-section
+  .card-wrapper
+  .card-large-wvideo
+  .text-container
+  a:visited {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 300;
+  z-index: 1;
+  color: rgb(0, 102, 255);
+  margin-top: 2rem;
+  transition: 0.5s;
+}
+
+.card-display-section
+  .card-wrapper
+  .card-large-wvideo
+  .text-container
+  a::before {
+  content: "\f061";
+  font-family: FontAwesome;
+  position: absolute;
+  font-weight: 100;
+  font-size: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2rem;
+  transition: 0.5s;
+}
+
+.card-display-section .card-wrapper .card-large-wvideo .text-container a:hover {
+  transform: translateY(-0.5rem);
+}
+
+.card-display-section
+  .card-wrapper
+  .card-large-wvideo
+  .text-container
+  a:hover::before {
+  transform: translateY(-50%) translateX(0.5rem);
+}
