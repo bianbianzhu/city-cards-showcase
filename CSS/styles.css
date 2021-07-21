@@ -94,7 +94,7 @@ body {
   z-index: -10;
 }
 
-/* =====================main-page-background============ */
+/* =====================main-page-background============= */
 .card-display-section::before {
   content: "";
   position: absolute;
